@@ -1,10 +1,11 @@
 "use client";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Card from "../ui/card/Card";
 
 const HowItWorks = () => {
   const locale = useLocale();
   const t = useTranslations();
+
   return (
     <section
       className={`bg-[#3B2222] py-5`}

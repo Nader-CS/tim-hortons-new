@@ -53,8 +53,7 @@ const PolicyPrivacy = () => {
               <p>Information about your use of the Services; and</p>
               <p>Information we obtain from third-party sources.</p>
               <p className="mb-3">
-                We also may collect information in ways that we describe to you
-                at the point of collection or otherwise with your consent.
+                We also may collect information in ways that we describe to you at the point of collection or otherwise with your consent.
               </p>
               <p className="mb-3">
                 When you purchase an item online via our website or our app, we
