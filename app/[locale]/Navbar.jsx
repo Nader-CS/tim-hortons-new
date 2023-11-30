@@ -11,6 +11,13 @@ const Navbar = () => {
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
+  const onBodyClickHandler = (event) => {
+    const navbar = document.getElementById("navbar");
+
+    if (navbar && !navbar.contains(event.target) && isNavOpen) {
+      setIsNavOpen(false);
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,11 +27,13 @@ const Navbar = () => {
     };
 
     window.addEventListener("resize", handleResize);
+    document.body.addEventListener("click", onBodyClickHandler);
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      document.body.removeEventListener("click", onBodyClickHandler);
     };
-  }, []);
+  }, [isNavOpen]);
 
   const onNavbarClickHandler = () => {
     if (isNavOpen) {
@@ -40,7 +49,7 @@ const Navbar = () => {
         direction: "ltr",
       }}
     >
-      <nav className="border-gray-200 dark:bg-gray-900 h-[100%]">
+      <nav className="border-gray-200 dark:bg-gray-900 h-[100%]" id="navbar">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 h-[100%]">
           <div className="hidden md:block">
             <ul className="font-medium flex flex-row p-4 md:p-0 mt-4 gap-10 text-white ">
@@ -53,7 +62,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/" onClick={onNavbarClickHandler}>
               <img
                 src="/assets/icons/header/header_logo.svg"
                 width={179}
