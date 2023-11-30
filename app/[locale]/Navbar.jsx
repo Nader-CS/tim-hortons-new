@@ -26,6 +26,12 @@ const Navbar = () => {
     };
   }, []);
 
+  const onNavbarClickHandler = () => {
+    if (isNavOpen) {
+      setIsNavOpen(false);
+    }
+  };
+
   return (
     <header
       className="bg-[#A82730] h-[93px] sticky top-0 left-0 z-50 "
@@ -47,12 +53,14 @@ const Navbar = () => {
             </ul>
           </div>
           <div>
-            <img
-              src="/assets/icons/header/header_logo.svg"
-              width={179}
-              height={35.5}
-              alt="logo"
-            />
+            <Link href="/">
+              <img
+                src="/assets/icons/header/header_logo.svg"
+                width={179}
+                height={35.5}
+                alt="logo"
+              />
+            </Link>
           </div>
           <button
             onClick={toggleNav}
@@ -85,22 +93,38 @@ const Navbar = () => {
           >
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#A82730] md:bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 text-white">
               <li className="block pt-2 px-3 hover:bg-white hover:text-black md:hover:bg-[transparent] md:hover:text-[white] ">
-                <Link href="package" className="block">
+                <Link
+                  href="package"
+                  className="block"
+                  onClick={onNavbarClickHandler}
+                >
                   {t("catering_menu")}
                 </Link>
               </li>
               <li className=" pt-2 px-3 hover:bg-white hover:text-black md:hover:bg-[transparent] md:hover:text-[white] ">
-                <Link href="our-commitment" className="block">
+                <Link
+                  href="our-commitment"
+                  className="block"
+                  onClick={onNavbarClickHandler}
+                >
                   {t("our_commitment")}
                 </Link>
               </li>
               <li className=" pt-2 px-3 block md:hidden hover:bg-white hover:text-black">
-                <Link href="locations" className="block">
+                <Link
+                  href="locations"
+                  className="block"
+                  onClick={onNavbarClickHandler}
+                >
                   {t("locations")}
                 </Link>
               </li>
               <li className=" pt-2 px-3  block md:hidden hover:bg-white hover:text-black">
-                <Link href="about-us" className="block">
+                <Link
+                  href="about-us"
+                  className="block"
+                  onClick={onNavbarClickHandler}
+                >
                   {t("about-us")}
                 </Link>
               </li>

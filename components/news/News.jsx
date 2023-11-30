@@ -2,10 +2,15 @@
 import { useTranslations, useLocale } from "next-intl";
 import Button from "../ui/button/Button";
 import Card from "../ui/card/Card";
+import { useRouter } from "next/navigation";
 
 const News = () => {
   const t = useTranslations();
   const locale = useLocale();
+  const router = useRouter();
+  const onOrderNowButtonHandler = () => {
+    router.push("/order");
+  };
 
   return (
     <section className="bg-[#F8F5EF] pb-[3rem] pt-[3rem]">
@@ -61,6 +66,7 @@ const News = () => {
                     fontFamily:
                       locale == "en" ? "sofia pro" : "GE SS Two Medium",
                   }}
+                  onClick={onOrderNowButtonHandler}
                 />
               </div>
             </div>
@@ -106,6 +112,7 @@ const News = () => {
                     fontFamily:
                       locale == "en" ? "sofia pro" : "GE SS Two Medium",
                   }}
+                  onClick={onOrderNowButtonHandler}
                 />
               </div>
             </div>

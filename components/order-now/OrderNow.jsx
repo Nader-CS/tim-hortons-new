@@ -3,10 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../ui/button/Button";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 const OrderNow = () => {
   const t = useTranslations();
   const locale = useLocale();
+  const router = useRouter();
+  const onOrderNowClickHandler = () => {
+    router.push("/order");
+  };
   return (
     <section className="bg-[#F8F5EF] w-full fixed bottom-0 z-10">
       <div className="  flex justify-center lg:justify-start container mx-auto gap-[30px] ">
@@ -33,6 +38,7 @@ const OrderNow = () => {
             style={{
               fontFamily: locale == "en" ? "sofia pro" : "GE SS Two Medium",
             }}
+            onClick={onOrderNowClickHandler}
           />
         </div>
       </div>

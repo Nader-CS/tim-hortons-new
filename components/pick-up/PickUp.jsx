@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 const PickUp = () => {
   const t = useTranslations();
   const locale = useLocale();
@@ -40,20 +41,24 @@ const PickUp = () => {
           </p>
           <div className="md:flex md:justify-center">
             <div>
-              <Image
-                src="/assets/images/home/download/app_store.png"
-                className="w-[10rem] md:w-[15rem] inline-block mx-auto "
-                width="200"
-                height="300"
-              />
+              <Link href="https://apps.apple.com/us/app/tim-hortons/id1143883086">
+                <Image
+                  src="/assets/images/home/download/app_store.png"
+                  className="w-[10rem] md:w-[15rem] inline-block mx-auto "
+                  width="200"
+                  height="300"
+                />
+              </Link>
             </div>
             <div>
-              <Image
-                src="/assets/images/home/download/google_play.png"
-                className="w-[10rem] md:w-[15rem] inline-block mx-auto "
-                width="200"
-                height="300"
-              />
+              <Link href="https://play.google.com/store/apps/details?id=digital.rbi.timhortons&hl=en&gl=US">
+                <Image
+                  src="/assets/images/home/download/google_play.png"
+                  className="w-[10rem] md:w-[15rem] inline-block mx-auto "
+                  width="200"
+                  height="300"
+                />
+              </Link>
             </div>
           </div>
         </div>

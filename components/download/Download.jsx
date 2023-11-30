@@ -1,6 +1,7 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
 import Card from "../ui/card/Card";
+import Link from "next/link";
 
 const Download = () => {
   const t = useTranslations();
@@ -10,7 +11,7 @@ const Download = () => {
       <article className="container mx-auto text-center">
         <Card className="bg-[#3B2222] p-3 md:flex md:flex-wrap lg:py-[3rem]">
           <div className="hidden md:block md:basis-[50%] relative">
-            <div className="absolute left-[20%] top-[-9rem] md:top-[-10rem] lg:top-[-7rem] xl:top-[-11rem] w-[70%] lg:w-[50%]">
+            <div className="absolute left-[20%] top-[-9rem] md:top-[-10rem] lg:top-[-7rem] xl:top-[-11rem] w-[70%] lg:w-[50%] 2xl:w-[40%]">
               <img
                 src="/assets/images/info/how_it_works/how-it-works2.png"
                 className="w-full"
@@ -46,16 +47,20 @@ const Download = () => {
             </div>
             <div className="md:flex md:justify-center">
               <div>
-                <img
-                  src="/assets/images/home/download/app_store.png"
-                  className="w-[50%] inline-block mx-auto md:w-[100%] md:h-[65px]"
-                />
+                <Link href="https://apps.apple.com/us/app/tim-hortons/id1143883086">
+                  <img
+                    src="/assets/images/home/download/app_store.png"
+                    className="w-[50%] inline-block mx-auto md:w-[100%] md:h-[65px]"
+                  />
+                </Link>
               </div>
               <div>
-                <img
-                  src="/assets/images/home/download/google_play.png"
-                  className="w-[50%] inline-block mx-auto md:w-[100%] md:h-[65px]"
-                />
+                <Link href="https://play.google.com/store/apps/details?id=digital.rbi.timhortons&hl=en&gl=US">
+                  <img
+                    src="/assets/images/home/download/google_play.png"
+                    className="w-[50%] inline-block mx-auto md:w-[100%] md:h-[65px]"
+                  />
+                </Link>
               </div>
             </div>
           </div>

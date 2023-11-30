@@ -90,27 +90,33 @@ const Footer = () => {
               {t("connect_with_us")}
             </h1>
             <div className="flex gap-10 justify-center md:justify-start  mt-3">
-              <Image
-                src="/assets/images/footer/facebook.svg"
-                className="inline-block"
-                width="30"
-                height="30"
-                alt="facebook logo"
-              />
-              <Image
-                src="/assets/images/footer/insta.svg"
-                className="inline-block"
-                width="30"
-                height="30"
-                alt="insta logo"
-              />
-              <Image
-                src="/assets/images/footer/twitter.svg"
-                className="inline-block"
-                width="30"
-                height="30"
-                alt="twitter logo"
-              />
+              <Link href="https://www.facebook.com/TimHortons">
+                <Image
+                  src="/assets/images/footer/facebook.svg"
+                  className="inline-block"
+                  width="30"
+                  height="30"
+                  alt="facebook logo"
+                />
+              </Link>
+              <Link href="https://www.instagram.com/TimHortons/">
+                <Image
+                  src="/assets/images/footer/insta.svg"
+                  className="inline-block"
+                  width="30"
+                  height="30"
+                  alt="insta logo"
+                />
+              </Link>
+              <Link href="https://twitter.com/timhortons">
+                <Image
+                  src="/assets/images/footer/twitter.svg"
+                  className="inline-block"
+                  width="30"
+                  height="30"
+                  alt="twitter logo"
+                />
+              </Link>
             </div>
           </div>
         </div>

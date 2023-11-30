@@ -1,6 +1,7 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
 import Card from "../ui/card/Card";
+import Link from "next/link";
 
 const RedeemMore = () => {
   const t = useTranslations();
@@ -75,16 +76,20 @@ const RedeemMore = () => {
                 <p>{t("download_now")}</p>
               </div>
               <div>
-                <img
-                  src="/assets/images/home/download/app_store.png"
-                  className="w-[50%] inline-block mx-auto lg:w-[100%] lg:h-[65px]"
-                />
+                <Link href="https://apps.apple.com/us/app/tim-hortons/id1143883086">
+                  <img
+                    src="/assets/images/home/download/app_store.png"
+                    className="w-[50%] inline-block mx-auto lg:w-[100%] lg:h-[65px]"
+                  />
+                </Link>
               </div>
               <div>
-                <img
-                  src="/assets/images/home/download/google_play.png"
-                  className="w-[50%] inline-block mx-auto lg:w-[100%] lg:h-[65px]"
-                />
+                <Link href="https://play.google.com/store/apps/details?id=digital.rbi.timhortons&hl=en&gl=US">
+                  <img
+                    src="/assets/images/home/download/google_play.png"
+                    className="w-[50%] inline-block mx-auto lg:w-[100%] lg:h-[65px]"
+                  />
+                </Link>
               </div>
             </div>
           </div>
